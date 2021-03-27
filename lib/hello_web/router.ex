@@ -19,6 +19,12 @@ defmodule HelloWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/", HelloWeb do
+    pipe_through :browser
+
+    get "/test", TestController, :index
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", HelloWeb do
   #   pipe_through :api

@@ -1,0 +1,5 @@
+<section class="phx-hero">
+  <h1><%= gettext "I am another %{name}!", name: "Page" %></h1>
+  <p>Does this work?</p>
+  <p><%= link("back", to: "/") %></p>
+</section>
