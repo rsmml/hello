@@ -1,5 +1,5 @@
 <section class="phx-hero">
-  <h1><%= gettext "I am another %{name}!", name: "Page" %></h1>
+  <h1 id="step3"><%= gettext "I am another %{name}!", name: "Page" %></h1>
   <p>Does this work?</p>
-  <p><%= link("back", to: "/") %></p>
+  <p id="step4"><%= link("back", to: "/") %></p>
 </section>
