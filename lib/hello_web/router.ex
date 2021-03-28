@@ -7,6 +7,7 @@ defmodule HelloWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug HelloWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
@@ -20,6 +21,8 @@ defmodule HelloWeb.Router do
     get "/test", TestController, :index
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
+
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
